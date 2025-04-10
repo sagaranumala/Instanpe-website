@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import JobApplyDrawer from "./JobApplyDrawer";
 import { urls } from "@/app/constant";
+import {jobsDataSample} from "../../utils/sampleData"
 
 interface Job {
   jobID: any;
@@ -160,7 +161,7 @@ export const Jobs: React.FC<FilteredDataProps> = ({ filteredItems }) => {
 };
 
 const Opportunities = () => {
-  const [jobs, setJobs] = useState<Job[]>([]);
+  const [jobs, setJobs] = useState<Job[]>(jobsDataSample.data);
   const [query, setQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState<Job[]>(jobs);
 
@@ -189,6 +190,9 @@ const Opportunities = () => {
             .filter((item: string) => item !== ""),
         }));
         setJobs(jobData);
+        // if(jobData.length===0){
+        //     setJobs(jobsDataSample.data)
+        // }
         setFilteredItems(jobData);
       })
       .catch((error) => {
