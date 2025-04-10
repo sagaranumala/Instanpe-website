@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+ 
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Components/Contact/Location1.tsx", "app/Components/Careers/EmblaCarousel.tsxwButtons.jsx", "app/Components/Careers/EmblaCarousel.jsx", "app/Components/Careers/CareerEmailTemplate.jsx", "app/Components/Contact/ContactEmailTemplate.jsx"],
+  "exclude": ["node_modules"]
+}
